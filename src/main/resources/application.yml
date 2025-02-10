@@ -1,0 +1,33 @@
+server:
+  port: 8085
+
+# spring boot configurations
+spring:
+  application:
+    name: vg-ms-study-programme
+  data:
+    mongodb:
+      uri: mongodb+srv://gabrielgutierrezq:3mbmCx8Gx6hrRKHY@as221s5prs2.1e7z9.mongodb.net/AS221S5PRS2?retryWrites=true&w=majority&appName=AS221S5PRS2
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: jonathan.espichan@vallegrande.edu.pe
+    password: pfgdscjcyizsjotm
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+# Swagger
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api/contact
+
+# Configuración de la API
+api:
+  version: api/v1
